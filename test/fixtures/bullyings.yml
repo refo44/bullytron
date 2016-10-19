@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bully: one
+  bulled: one
+  decription: MyText
+  the_best: false
+
+two:
+  bully: two
+  bulled: two
+  decription: MyText
+  the_best: false
