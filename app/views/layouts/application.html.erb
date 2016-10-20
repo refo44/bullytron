@@ -3,12 +3,28 @@
   <head>
     <title>Bullytron</title>
     <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+  <header>
+  	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <%= image_tag "hack-logo-1.png",style:"max-width:50px;",class:"img-responsive" %>
+      </a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><%= link_to 'Inicio', people_path %></li>
+      <li><%= link_to 'Añadir Persona', new_person_path %></li> 
+    </ul>
+  </div>
+</nav>
+  </header>
     <%= yield %>
   </body>
 </html>

@@ -23,3 +23,14 @@
        url('../assets/glyphicons-halflings-regular.ttf') format('truetype'), 
        url('../assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
+.navbar-brand {
+	pointer-events: none;
+    cursor: default;
+}
+.navbar-brand>img {
+    display: block;
+    position: relative;
+    bottom: 15px;
+    
+
+}

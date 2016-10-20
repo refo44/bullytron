@@ -1,0 +1,26 @@
+<h1>Añadir Persona</h1>
+
+<%= form_for(@person) do |f| %>
+
+<div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :photo %>
+    <%= f.file_field :photo %>
+  </div>
+
+  <div class="field">
+		<%= f.submit "Guardar", class:"btn"%>
+	</div>
+
+	<%end%>
+
+<p><%= link_to 'Regresar', people_path, class:"btn btn-default",role:"button" %></p>
