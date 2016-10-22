@@ -13,13 +13,18 @@ class PeopleController < ApplicationController
     @person = Person.new(person_params)
 
     if @person.save
-      redirect_to @person
+      redirect_to people_path
     else
       render :new 
     end
   end
 
   def destroy
+     @user.destroy
+    respond_to do |format|
+      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
 
   def edit

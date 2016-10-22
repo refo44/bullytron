@@ -1,0 +1,164 @@
+body
+{
+    background: url('background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+/* tabs buttons */
+
+.nav-pills > li > .btn-circle
+{
+    overflow: hidden;
+
+    width: 42px;
+    height: 42px;
+
+    text-align: left;
+
+    opacity: .3;
+    color: #337ab7;
+    border-radius: 50%;
+
+    transition: width 0.4s ease-in-out, opacity 0.1s ease-in-out,background 0.4s ease-in-out,border-radius 0.4s ease-in-out;
+    	-webkit-transition: width 0.4s ease-in-out,opacity 0.1s ease-in-out,background 0.4s ease-in-out,border-radius 0.4s ease-in-out;
+    	-moz-transition: width 0.4s ease-in-out,opacity 0.1s ease-in-out,background 0.4s ease-in-out,border-radius 0.4s ease-in-out;
+}
+
+
+.nav-pills > li > .btn-circle::first-letter
+{
+  
+
+    position: relative;
+    top: 50%;
+
+    transform: translateY(-50%);
+    letter-spacing: 2em;
+    transition:  display 0.1s ease-in-out;
+    	-webkit-transition:  display 0.1s ease-in-out;
+    	-moz-transition:  display 0.1s ease-in-out;
+}
+
+/* tabs buttons */
+/* hover */
+
+
+.nav-pills > li > .btn-circle:hover
+{
+    width: 200px;
+
+    opacity: 1;
+    border-radius: 20px ;
+    background: #eee;
+}
+
+.nav-pills > li > .btn-circle:hover::first-letter
+{
+   
+
+    position: fixed;
+    top: 50%;
+
+    display: inline;
+
+    transform: translateY(-50%);
+    letter-spacing: 0;
+}
+
+/* tabs buttons */
+/* active */
+
+.nav-pills > .active > .btn-circle
+{
+    width: 200px;
+
+    opacity: 1;
+    color: #eee;
+    border-radius: 20px ;
+    background: #337ab7;
+}
+
+
+
+.nav-pills > .active > .btn-circle::first-letter
+{
+    font-size: 1em;
+
+    position: fixed;
+    top: 50%;
+
+    display: inline;
+
+    transform: translateY(-50%);
+    letter-spacing: 0;
+}
+
+/* image */
+
+.img_hack {
+	width: 50%;
+	height: 50%;
+}
+
+.img-wrap{
+	padding: 20%;
+	width: 130%;
+	height: 130%;
+}
+
+  .rectangle_border{
+ 	background: #b3b3b3;
+
+}
+
+ .rectangle_container{
+	width: 80%;
+	height: 20%;
+	margin: auto 0;
+	position:  absolute;
+	left: 25%;
+	bottom:0;
+}
+
+  .rectangle_container #rectangle1 {
+	width: 90%;
+	margin: 0 auto;
+    max-width: 300px;
+    height: 74px;
+	position:  absolute;
+	top: 0;
+	left: 50%;
+	transform:  translateX(-50%);
+}
+
+.rectangle_container .rectangle_center{
+	background: #fff;
+	width: 100%;
+	height: 70%;
+	margin: auto 0;
+	position:  absolute;
+	left: 0;
+	top: 50%;
+	transform:  translateY(-50%);
+    padding: 2%;
+    padding-left: 20%;
+   /*  display: none; */
+}
+
+#rectangle1 #rectangle2 span {
+
+	color: #555;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.2em;
+	margin: 0 auto;
+	
+}
+
+
+
+
+
+
