@@ -1,0 +1,32 @@
+  <div class="container-fluid">
+    <div class="row">
+     <div class="col-sm-4 container-fluid">     
+       <%= render 'mainphoto', person: person %>   
+     </div>
+     <!-- end col-sm-4 container-fluid -->
+     <div class="col-sm-7 container-fluid center-block">
+        <div class="row">
+          <div class="col-sm-12">                   
+            <div class="quote"> 
+              <p>       
+                Yo Chiossono, tu Chiossonas, el Chiossona
+              </p>
+            </div>
+          </div>
+          <!-- end col-sm-12 -->                                   
+        </div>
+        <!-- end row -->
+      <nav class="submenu">
+        <ul>
+          <li>  Chalequear </li>
+          <li>  Votar </li>
+          <li><%= link_to 'Eliminar Perfil', person_path(person),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %> </li>
+        </ul>
+      </nav>
+     </div>
+    </div>
+     <!-- end row -->
+  </div>
+  <!-- end container fluid-->		 

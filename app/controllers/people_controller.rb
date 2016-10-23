@@ -20,9 +20,9 @@ class PeopleController < ApplicationController
   end
 
   def destroy
-     @user.destroy
+     @person.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+      format.html { redirect_to people_url, notice: 'El pefil fue eliminado' }
       format.json { head :no_content }
     end
   end
@@ -38,7 +38,7 @@ class PeopleController < ApplicationController
 
    private
     def find_person
-      @person = Person.find(params[:id])
+      @person = Person.find(person_params[:id])
     end
     def person_params
       params.require(:person).permit(:id,:first_name, :last_name, :photo)

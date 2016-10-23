@@ -5,13 +5,17 @@
 		<div class="col-sm-2">
 			<ul class="nav nav-pills nav-stacked" role="tablist">
 				<% @people.each_with_index do |person,k| %>
-				
-				
-
-					<li role="presentation">
-						<a class="btn btn-default btn-circle" href=<%="#student#{k}"%> aria-controls=<%="student#{k}"%>
-						 role="tab" data-toggle="tab"><span><%=person.full_name%> </span></a>
-					</li>
+					<% if k.zero? %>
+						<li role="presentation" class="active">
+							<a class="btn btn-default btn-circle" href=<%="#student#{k}"%> aria-controls=<%="student#{k}"%>
+							 role="tab" data-toggle="tab"><span><%=person.full_name%> </span></a>
+						</li>
+					<% else %>
+						<li role="presentation">
+							<a class="btn btn-default btn-circle" href=<%="#student#{k}"%> aria-controls=<%="student#{k}"%>
+							 role="tab" data-toggle="tab"><span><%=person.full_name%> </span></a>
+						</li>
+	        <% end %>
         <% end %>
 	
 			</ul>
@@ -23,42 +27,17 @@
         <div class="col-sm-10">
             <div class="tab-content">
             	<% @people.each_with_index do |person,k| %>
-                <div role="tabpanel"  id=<%="student#{k}"%> class="tab-pane">
-  								<div class="container-fluid">
-  									<div class="row">
-  										<div class="col-sm-4 container-fluid">
-  										<div class="row">
-														<div class="img-wrap center-block">
-															<%= image_tag "hack-logo-2.png",class:"img-responsive center-block" %>																					
-														</div>
-														<!-- end img-wrap -->
-												</div>
-												<!-- end row --> 
-												<div class="row">
-															<div class="img-wrap center-block">
-															<%= image_tag person.photo.url,class:"img-responsive center-block" %>
-
-															<div class="rectangle_container center-block">
-																<div class = rectangle_border id="rectangle1">
-																	<div class= "rectangle_center" id="rectangle2">
-																		<span> <%=person.first_name%></span> <br>
-																		<span> <%=person.last_name%></span>
-																	</div>
-																</div>
-															</div>																					
-														</div>
-														<!-- end img-wrap -->
-												</div>
-												<!-- end row -->                        
-                      </div>
-                      <!-- end col-sm-4 container-fluid -->
-  									</div>
-  									<!-- end row -->
-  								</div>
-									<!-- end container fluid-->		 
-
-  							</div> 
-                <!-- end tab-pane student -->
+								<% if k.zero? %>
+                	<div role="tabpanel"  id=<%="student#{k}"%> class="tab-pane active">			
+  									<%= render 'tabpanel', person: person %>
+  								</div> 
+                	<!-- end tab-pane student -->
+                <% else %>
+                	<div role="tabpanel"  id=<%="student#{k}"%> class="tab-pane">			
+  									<%= render 'tabpanel', person: person %>
+  								</div> 
+                	<!-- end tab-pane student -->
+                <% end %>
 							<% end %>
            </div>
             <!-- end tab content -->
